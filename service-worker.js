@@ -1,6 +1,7 @@
 const CACHE_NAME = 'configuracion-pwa';
 const filesToCache = [
     '/',
+    '/app.js',
     '/index.html',
     '/icon.png',
     '/icon-large.png',

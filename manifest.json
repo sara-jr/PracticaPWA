@@ -1,7 +1,7 @@
 {
     "name": "Configuración PWA",
     "short_name": "ConfPWA",
-    "description": "Una applicación web progresiva",
+    "description": "Una applicación web progresiva para la clase con el mismo nombre de decimo cuatrimestre.",
     "start_url": "/index.html",
     "display": "browser",
     "background_color": "#FFFFFF",
@@ -9,7 +9,7 @@
     "icons": [
         {
         "src": "/icon.png",
-        "size": "192x192",
+        "size": "128x128",
         "type": "image/png"
         },
         {

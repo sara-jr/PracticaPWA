@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Configuración PWA</title>
-<!-- Añadir el manifest para que el navegador lo detecte -->
-<link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración PWA</title>
+    <!-- Añadir el manifest para que el navegador lo detecte -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <h1 hidden style="background-color: red; color:pink">Si ves este mensaje tu navegador no tiene soporte para los service workers</h1>
-    <h1>Bienvenid@</h1>
-    <p>En esta práctica se realiza la configuración de una PWA básica.</p>
-    <!-- Registrar el Service Worker para habilitar la funcionalidad offline -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                console.log('El service Worker ha sido registrado con éxito:',registration);
-            }).catch(function(error) {
-                console.log('Error en el registro del Service Worker:', error);
-            });
-        }
-        else{
-            document.getElementById('error').style.display = 'block';
-        }
-    </script>
+    <header> 
+        <h1>App Shell PWA</h1>
+        <nav> 
+        <ul> 
+            <li><a href="#" id="home">Inicio</a></li> 
+            <li><a href="#" id="about">Acerca de</a></li> 
+            <li><a href="#" id="contact">Contacto</a></li> 
+        </ul> 
+        </nav> 
+    </header> 
+    <main id="content"> 
+        <p>Bienvenido a nuestra App Shell PWA. Elige una sección para navegar.</p>
+    </main> 
+    <footer> 
+        <p>&copy; 2024 UTSOE IGSOFT 10A</p> 
+    </footer> 
+    <script src="app.js"></script> 
 </body>
 </html>
