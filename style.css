@@ -32,10 +32,23 @@ main{
 }
 
 footer{
+    display: block;
     background-color: #333;
     color: white;
     padding: 10px 0;
     position: absolute;
     width: 100%;
     bottom: 0;
+}
+
+#splash-screen { 
+    position: absolute; 
+    top: 0; /* La parte superior de la pantalla se alinea con el borde  superior. */ 
+    left: 0; /* La parte izquierda de la pantalla se alinea con el borde  izquierdo. */ 
+    right: 0; /* La parte derecha de la pantalla se alinea con el borde  derecho. */ 
+    bottom: 0; /* La parte inferior de la pantalla se alinea con el borde  inferior. */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #ffffff; 
 }

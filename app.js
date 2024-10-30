@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     content.innerHTML = '<p>Esta es la página "Acerca de".</p>';  }); 
     contactLink.addEventListener('click', () => { 
     content.innerHTML = '<p>Esta es la página de contacto.</p>';  }); 
+
+    window.onload = () =>{
+        setTimeout(()=>{ // Esta parte es para simular que la aplicacion tomoa tiempo en cargar
+            document.getElementById('splash-screen').style.display = 'none';
+            document.getElementById('home-screen').style.display = 'block';
+        }, 5000);
+    }
 }); 
 
 if ('serviceWorker' in navigator) {
