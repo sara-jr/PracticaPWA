@@ -1,54 +1,64 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Establece una fuente sans-serif */
+    background-color: #f4f4f4; /* Color de fondo suave */
+    margin: 0; /* Elimina el margen del body */padding: 20px; /* Añade un padding para espaciado */
+}
+.contenedor {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor en la pantalla */
+    background: white; /* Color de fondo blanco para el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
+}
+h1 {
+    color: #333; /* Color del texto del título */
+}
+input[type="text"] {
+    width: calc(100% - 22px); /* Ancho del campo de texto */
+    padding: 10px; /* Espaciado interno del campo de texto */
+    margin-bottom: 10px; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde del campo de texto */
+    border-radius: 4px; /* Bordes redondeados para el campo de texto */
+}
+button {
+    width: 100%; /* Botón ocupa todo el ancho */
+    padding: 10px; /* Espaciado interno del botón */
+    background-color: #28a745; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-bottom: 10px; /* Margen inferior para separación */
 }
 
-header{
-    background-color: #2196F3;
-    color: white;
-    padding: 15px 0;
+button:hover {
+    background-color: #218838; /* Color del botón al pasar el mouse */
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
+ul {
+    list-style-type: none; /* Elimina el estilo de lista */
+    padding: 0; /* Elimina el padding */
 }
-
-nav ul li{
-    display: inline;
-    margin: 0 10px;
+li {
+    padding: 10px; /* Espaciado interno de cada nota */
+    border-bottom: 1px solid #ccc; /* Borde inferior para separar notas */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
 }
-
-nav ul li a{
-    color: white;
-    text-decoration: none;
+li button {
+    width: 80px; /* Ancho fijo para el botón de eliminar */
+    padding: 5px; /* Espaciado interno del botón de eliminar */
+    background-color: #dc3545; /* Color de fondo para el botón de eliminar
+    */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    text-align: center; /* Centra el texto en el botón */
 }
-
-main{
-    padding: 20px;
-}
-
-footer{
-    display: block;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-#splash-screen { 
-    position: absolute; 
-    top: 0; /* La parte superior de la pantalla se alinea con el borde  superior. */ 
-    left: 0; /* La parte izquierda de la pantalla se alinea con el borde  izquierdo. */ 
-    right: 0; /* La parte derecha de la pantalla se alinea con el borde  derecho. */ 
-    bottom: 0; /* La parte inferior de la pantalla se alinea con el borde  inferior. */
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    background-color: #ffffff; 
+li button:hover {
+    background-color: #c82333; /* Color del botón de eliminar al pasar el mouse */
 }

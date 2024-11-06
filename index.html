@@ -9,25 +9,25 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div id="splash-screen">
-        <img src="splash-screen.png" alt="Splash Screen"> 
+    <div class="contenedor">
+        <h1>Notas Inteligentes</h1>
+        <input type="text" id="entradaNota" placeholder="Escribe una nota...">
+        <button id="botonGuardar">Guardar Nota</button>
+        <ul id="listaNotas"></ul>
     </div>
-    <header> 
-        <h1>App Shell PWA</h1>
-        <nav> 
-        <ul> 
-            <li><a href="#" id="home">Inicio</a></li> 
-            <li><a href="#" id="about">Acerca de</a></li> 
-            <li><a href="#" id="contact">Contacto</a></li> 
-        </ul> 
-        </nav> 
-    </header> 
-    <main id="content"> 
-        <p>Bienvenido a nuestra App Shell PWA. Elige una sección para navegar.</p>
-    </main>
-    <footer> 
-        <p>&copy; 2024 UTSOE IGSOFT 10A</p> 
-    </footer> 
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(error => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+            });
+        }
+    </script>
     <script src="app.js"></script> 
 </body>
 </html>
